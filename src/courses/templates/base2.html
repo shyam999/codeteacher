@@ -1,0 +1,28 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Etrain</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static "css/lib/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Permanent+Marker" />
+</head>
+<body>
+    {% block content %}
+
+    {% endblock %}
+    <!-- jquery -->
+    <script src="{% static "js/jquery-1.12.1.min.js" %}"></script>
+    <!-- bootstrap js -->
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+ 
+</body>
+
+</html>
