@@ -2,17 +2,15 @@
 
 This is a project built using Django, embed-video, django-braces and memcache
 
-
 ## Installation:
-
-**1.Setup Virtualenv**
+**1.Clone Repo**
+```sh
+git clone https://github.com/shyam999/codeteacher.git
+```
+**2.Setup Virtualenv**
 ```sh
 virtualenv env
 source env/bin/activate
-```
-**2.Clone Repo**
-```sh
-git clone https://github.com/shyam999/codeteacher.git
 ```
 **3.Install Requirements**
 ```sh
@@ -43,4 +41,4 @@ python manage.py runserver
 Like Me on [Facebook](https://www.facebook.com/shyam333445/)
 
 
-Or visit My [Website](#)
+Or visit My [Website](shyam999.github.io)
