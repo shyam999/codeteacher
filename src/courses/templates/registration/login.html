@@ -3,6 +3,7 @@
 {% block title %}Log-in{% endblock %}
 
 {% block content %}
+<div class="container">
   <div class="login-module">
     {% if form.errors %}
       <p>Your username and password didn't match. Please try again.</p>
@@ -19,4 +20,5 @@
       </form>
     </div>
   </div>
+</div>
 {% endblock %}
