@@ -13,7 +13,8 @@ git clone https://github.com/shyam999/codeteacher.git
 ```
 **2.Setup Virtualenv & Install Requirements**
 ```sh
-pip install -r requirements.txt
+pipenv install -r requirements.txt
+pipenv shell
 ```
 **3.Migrate Database**
 ```sh
