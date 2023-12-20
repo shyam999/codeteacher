@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>{% block title %}codocean{% endblock %}</title>
+  <meta property="og:url" content="https://"/>
+  <meta name="title" content="Learn Code Properly | Codocen">
+  <meta name="description" content="Codocean is a plartform for learning
+  coding skills the most efficient way. Learn Django, Bootstrap, Vue and more.">
+  <meta name="keywords" content="Online Learning, Web Development Course, Django Tutorial, Bootstrap Tutorial, Learn Django, Learn Vue">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="{% static "assets/vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+  <link href="{% static "assets/vendor/icofont/icofont.min.css" %}" rel="stylesheet">
+  <link href="{% static "assets/vendor/remixicon/remixicon.css" %}" rel="stylesheet">
+  <link href="{% static "assets/vendor/boxicons/css/boxicons.min.css" %}" rel="stylesheet">
+  <link href="{% static "assets/vendor/owl.carousel/assets/owl.carousel.min.css" %}" rel="stylesheet">
+  <link href="{% static "assets/vendor/venobox/venobox.css" %}" rel="stylesheet">
+  <link href="{% static "assets/vendor/aos/aos.css" %}" rel="stylesheet">
+  <!-- Main CSS File -->
+  <link href="{% static "assets/styles/main.css" %}" rel="stylesheet">
+</head>
+<body>
+  {% include "base/header.html" %}
+
+  {% block content %}
+  {% endblock %}
+
+  {% include "base/footer.html" %}
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+  <!-- Vendor JS Files -->
+  <script src="{% static "assets/vendor/jquery/jquery.min.js" %}"></script>
+  <script src="{% static "assets/vendor/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
+  <script src="{% static "assets/vendor/jquery.easing/jquery.easing.min.js" %}"></script>
+  <script src="{% static "assets/vendor/waypoints/jquery.waypoints.min.js" %}"></script>
+  <script src="{% static "assets/vendor/counterup/counterup.min.js" %}"></script>
+  <script src="{% static "assets/vendor/owl.carousel/owl.carousel.min.js" %}"></script>
+  <script src="{% static "assets/vendor/isotope-layout/isotope.pkgd.min.js" %}"></script>
+  <script src="{% static "assets/vendor/venobox/venobox.min.js" %}"></script>
+  <script src="{% static "assets/vendor/aos/aos.js" %}"></script>
+  <!-- Template Main JS File -->
+  <script src="{% static "assets/js/main.js" %}"></script>
+
+</body>
+
+</html>

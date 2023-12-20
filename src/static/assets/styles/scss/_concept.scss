@@ -1,0 +1,36 @@
+.concept-title {
+	margin-bottom: 60px;
+	h2 {
+		font-size: 60px;
+		font-weight: bold;
+		position: relative;
+		color: #1d4354;
+	}
+}
+.concept-section {
+	p {
+		padding-top: 5px;
+		color: #6a7080;
+		line-height: 1.8;
+		font-weight: 500;
+	}
+}
+.concept-item {
+	text-align: center;
+	padding-top: 35px;
+	img {
+		box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+		border-radius: 40px;
+		margin-bottom: 15px;
+		width: 16em;
+		height: 15em;
+	}
+}
+.quote-icon-left {
+	color: rgb(3, 168, 124);
+	font-size: 26px;
+}
+.quote-icon-right {
+	color: rgb(3, 168, 124);
+	font-size: 26px;
+}

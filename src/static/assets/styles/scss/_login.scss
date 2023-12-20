@@ -1,0 +1,83 @@
+.login {
+  margin: 7.7em 0;
+}
+
+.signup {
+  margin: 5.8em 0;
+}
+
+
+.login-card {
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+    background-color: #fff;
+}
+
+.login-card p {
+  font-size: 18px;
+}
+
+.btn-signin {
+  background: rgb(3, 168, 124);
+  color: #fff;
+  &:hover {
+    background: rgb(2, 158, 116);
+    color: #fff;
+  }
+}
+
+.btn-separator{
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: .1em;
+    font-weight: 300;
+}
+
+.btn-separator span {
+    padding: 0 10px;
+    background: #fff;
+    color: #606060;
+}
+
+.google-btn {
+    height: 42px;
+    background-color: #4285f4;
+    border-radius: 2px;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+    .google-icon-wrapper {
+      position: absolute;
+      margin-top: 1px;
+      margin-left: 1px;
+      width: 40px;
+      height: 40px;
+      border-radius: 2px;
+      background-color: #fff;
+    }
+    .google-icon {
+      position: absolute;
+      margin-top: 11px;
+      margin-left: 11px;
+      width: 18px;
+      height: 18px;
+    }
+    .btn-text {
+      color: #fff;
+      font-size: 14px;
+      text-align: center;
+      letter-spacing: .7px;
+    }
+    &:hover {
+      box-shadow: 0 0 6px #4285f4;
+    }
+    &:active {
+      background: #1669F2;
+    }
+  }
+  
+@media (max-width: 768px) {
+  .login {
+    margin: 3em 0 0 0;
+
+  }
+
+}

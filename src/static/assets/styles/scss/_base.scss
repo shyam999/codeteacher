@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+
+$white : #fff;
+$backgroundColor : #f7fbfe;
+$primaryColor : rgb(3, 168, 124);
+$primaryDark : rgb(5, 139, 104);
+$textColor : #1d4354;
+$textSecondary : #6a7080;
+
+a {
+    color: $primaryColor;
+}
+
+a:hover {
+    color: $primaryDark;
+    text-decoration: none;
+}
+
+h1,
+h2 {
+    font-family: "Playfair Display", Georgia, serif;
+}
+
+p {
+    font-family: "Quicksand", Arial, sans-serif;
+}
+
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.section-bg {
+    background-color: #f7fbfe;
+}
+
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+
+    h2 {
+        font-size: 36px;
+        font-weight: bold;
+        position: relative;
+        color: #1d4354;
+    }
+
+    p {
+        margin: 15px 0 0 0;
+    }
+}
+
+.colored-dash {
+    display: block;
+    width: 50px;
+    height: 7px;
+    margin-bottom: 15px;
+    background: #f3756c;
+}

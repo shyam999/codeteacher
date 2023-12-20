@@ -1,0 +1,45 @@
+.card {
+    border: 0;
+    border-radius: .4em;
+    box-shadow: 0 1px 6px rgba(57, 73, 76, .35);
+}
+.card-img {
+    height: 13em;
+}
+
+.course-card-actions {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: auto;
+}
+
+.Courses {
+    h4 {
+        font-size: 1.3rem;
+        letter-spacing: .5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #1d4354;
+    }
+    .buy-btn {
+        padding: .19rem .75rem;
+        font-size: 1rem;
+        border-radius: .25rem;
+        transition: 0.5s;
+        border: 2px solid rgb(3, 168, 124);
+        background: rgb(3, 168, 124);
+        color: #fff;
+        &:hover {
+            background: rgb(2, 158, 116);
+        }
+    }
+    .listing-btn-price {
+        display: inline-block;
+        margin-left: .15em;
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+    .view-link {
+        font-weight: 600;
+    }
+}
+

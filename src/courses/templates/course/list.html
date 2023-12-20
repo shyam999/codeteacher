@@ -1,0 +1,48 @@
+{% extends "base/base.html" %}
+{% block title %}
+  {% if language %}
+    {{ language.title }} courses
+  {% else %}
+    All courses
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+<h1>
+  {% if language %}
+    {{ language.title }} courses
+  {% else %}
+    All courses
+  {% endif %}
+</h1>
+<div class="contents">
+  <h3>Languages</h3>
+  <ul id="modules">
+    <li {% if not language %}class="selected" {% endif %}>
+      <a href="{% url "course_list" %}">All</a>
+    </li>
+    {% for l in languages %}
+    <li {% if language == l %}class="selected" {% endif %}>
+      <a href="{% url "course_list_language" l.slug %}">
+        {{ l.title }}
+        <br><span>{{ l.total_courses }} courses</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+<div class="module">
+  {% for course in courses %}
+    {% with language=course.language %}
+      <h3><a href="{% url "course_detail" course.slug %}">
+          {{ course.title }}</a></h3>
+      <p>
+        <a href="{% url "course_list_language" language.slug %}">
+        {{ language }}</a>.
+        {{ course.total_modules }} modules.
+        Instructor: {{ course.owner }}
+      </p>
+    {% endwith %}
+  {% endfor %}
+</div>
+{% endblock %}

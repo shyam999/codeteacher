@@ -1,0 +1,50 @@
+/*--------------------------------------------------------------
+# Cta
+--------------------------------------------------------------*/
+.cta-card {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 1px 6px rgba(57, 73, 76, .35);
+    margin: 0 0 30px;
+}
+
+.card-subtitle {
+    color: rgb(3, 168, 124);
+    line-height: 23px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.card-title {
+    font-size: 42px;
+    letter-spacing: 2px;
+    line-height: 44px;
+    color: #1d4354;
+    font-weight: 700;
+}
+
+.cta-button {
+    color: #fff;
+    background-color: rgb(3, 168, 124);
+    border-color: transparent;
+    padding: 11px 28px;
+    font-size: 16px;
+    line-height: 14px;
+    border-radius: 2px;
+    user-select: none;
+    display: inline-block;
+    border: 2px solid transparent;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: all .15s;
+    box-shadow: 0 1px 6px rgba(57, 73, 76, .35);
+
+    &:hover {
+        transition: all .3s;
+        outline: none;
+        background-color: rgb(2, 158, 116);
+        box-shadow: 0 2px 10px 1px rgba(57, 73, 76, .4);
+    }
+}

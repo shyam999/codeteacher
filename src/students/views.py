@@ -1,17 +1,17 @@
 from django.urls import reverse_lazy
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, FormView
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login
-from django.views.generic.edit import FormView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .forms import CourseEnrollForm, SignupForm
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from courses.models import Course
+from .forms import CourseEnrollForm
+
 
 class StudentRegistrationView(CreateView):
-
     template_name = 'students/student/registration.html'
-    form_class = SignupForm
+    form_class = UserCreationForm
     success_url = reverse_lazy('student_course_list')
 
     def form_valid(self, form):
@@ -21,8 +21,8 @@ class StudentRegistrationView(CreateView):
         login(self.request, user)
         return result
 
-class StudentEnrollCourseView(LoginRequiredMixin, FormView):
 
+class StudentEnrollCourseView(LoginRequiredMixin, FormView):
     course = None
     form_class = CourseEnrollForm
 
@@ -34,8 +34,8 @@ class StudentEnrollCourseView(LoginRequiredMixin, FormView):
     def get_success_url(self):
         return reverse_lazy('student_course_detail', args=[self.course.id])
 
-class StudentCourseListView(LoginRequiredMixin, ListView):
 
+class StudentCourseListView(LoginRequiredMixin, ListView):
     model = Course
     template_name = 'students/course/list.html'
 
@@ -43,8 +43,8 @@ class StudentCourseListView(LoginRequiredMixin, ListView):
         qs = super(StudentCourseListView, self).get_queryset()
         return qs.filter(students__in=[self.request.user])
 
-class StudentCourseDetailView(DetailView):
 
+class StudentCourseDetailView(DetailView):
     model = Course
     template_name = 'students/course/detail.html'
 
@@ -54,12 +54,9 @@ class StudentCourseDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(StudentCourseDetailView, self).get_context_data(**kwargs)
-        # get course object
         course = self.get_object()
         if 'module_id' in self.kwargs:
-            # get current module
-            context['module'] = course.modules.get(id=self.kwargs['module_id'])
+            context['module'] = course.modules.get(id=self.kwargs['module_id']) # get current module
         else:
-            # get first module
-            context['module'] = course.modules.all()[0]
+            context['module'] = course.modules.all()[0] # get first module
         return context
